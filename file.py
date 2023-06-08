@@ -3,7 +3,7 @@ class Ninja:
     def __init__(self, first_name, last_name, pet, treats, pet_food):
         self.first_name = first_name
         self.last_name = last_name
-        self.pet = pet('Momo', 'Lemur', ['Glide','Sneak', 'Sit'], health=50, energy=50) #! Why does this work but not using L85?
+        self.pet = pet        # Pet('Momo', 'Lemur', ['Glide','Sneak', 'Sit'], health=50, energy=50) #! Why does this work but not using L85?
         self.treats = treats
         self.pet_food = pet_food
 
@@ -79,13 +79,12 @@ class Pet:
 #play() - increases the pet's health by 5
 #noise() - prints out the pet's sound
 
-#!how can I make the Momo's health and energy work correctly?
 
-ninja = Ninja('Ang', 'The Avater', Pet, 'treats', 'pet_food')
-pet = Pet('Momo', 'Lemur', ['Glide','Sneak', 'Sit'], health=50, energy=50)
+momo = Pet('Momo', 'Lemur', ['Glide','Sneak', 'Sit'], health=50, energy=50)
+ninja = Ninja('Ang', 'The Avater', momo, 'treats', 'pet_food')
 
 
 ninja.walk().feed().bathe()
 print(" ")
-pet.sleep() 
+ninja.pet.sleep() 
 
