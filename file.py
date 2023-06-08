@@ -44,9 +44,8 @@ class Pet:
         self.energy = energy
 
     def sleep(self):
-        # self.energy += 10
-        # return self
-        pass
+        self.energy += 10
+        return self
 
     def eat(self):
         self.health += 10
